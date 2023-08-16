@@ -1,0 +1,46 @@
+table {
+    width: 100%;
+    margin-top: 50px;;
+  }
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .search {
+    width: 20%;
+    margin-left: 75%;
+    
+  }
+  .title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+  }
+  .add{
+    font-size: large;
+  }
+
+  th{
+    font-weight: bold;
+    font-size: small;
+    color: rgb(4, 11, 101);
+  }
+
+  .images{
+    background-image: url('https://th.bing.com/th/id/R.2491e31cf4abb917ae33462ef7f1f832?rik=9jlZe20QDkNLww&riu=http%3a%2f%2fwww.safemoneyplaces.com%2fuploads%2f1%2f0%2f0%2f9%2f10093869%2fsmn-article-sports_orig.jpg&ehk=gQc0X83m0WE75XWyQRRKvzNwfDtdMQF1loct8OUy124%3d&risl=&pid=ImgRaw&r=0');
+  }
+
+  .color{
+    color: aliceblue;
+    border-color: aliceblue;
+  }
+  th{
+    background-color: azure;
+  }
+  .sticky-header {
+    position: sticky;
+  }

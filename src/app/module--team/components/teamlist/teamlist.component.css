@@ -1,0 +1,47 @@
+table {
+  width: 100%;
+  margin-top: 5px;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.container {
+  margin-top: 20px; 
+  
+}
+.search {
+  width: 20%;
+  margin-left: 75%;
+  border: 20px;
+  
+}
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+.add{
+  font-size: large;
+}
+
+.text{
+  font-weight: bold;
+}
+
+th{
+  font-weight: bold;
+  font-size: small;
+  color: rgb(4, 11, 101);
+}
+
+.image{
+  background-image: url('https://th.bing.com/th/id/R.58e4d3f13b5a05aa0c6f37bf8680c9b2?rik=k9nuObFyN7hqwQ&riu=http%3a%2f%2fwww.shop4teams.com%2fblog%2fwp-content%2fuploads%2f2011%2f04%2funiforms-multi-sports.jpg&ehk=mTad361w6vLdVrFebN8JKpmsesyAFwBjsiJ1DPqjvF8%3d&risl=&pid=ImgRaw&r=0');
+}
+
+th{
+  background-color: azure;
+}
+.sticky-header {
+  position: sticky;
+}

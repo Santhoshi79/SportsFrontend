@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  th{
+    font-weight: bold;
+    font-size: small;
+    color: rgb(4, 11, 101);
+    border: 20px;
+    box-sizing: border-box;
+   /* background-color: rgb(red, green, blue)*/
+  }
+
+  .parent-container {
+    
+    justify-content: center;
+  }
+  th{
+    background-color: azure;
+  }
+ 

@@ -1,0 +1,79 @@
+<app-navbar style="position: relative; z-index: 1;"></app-navbar>
+<div style="margin-top: 130px;">
+<div class="container mt-4">
+
+        <mat-card class="example-card" style="margin: auto; max-width: 400px;" >
+            <form [formGroup]="searchForm">
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>
+                    <h3></h3>
+                    
+                </mat-card-title>
+                
+                <mat-form-field class="search" appearance="outline">
+                    <mat-label>Search Participant</mat-label>
+                    <input matInput type="text" matInput placeholder="participantId" formControlName="participantId">
+                    <mat-hint> Note:Participant Id start with 'P'</mat-hint>
+                    <mat-error>Please Enter ParticipantId</mat-error>
+                </mat-form-field>
+                <button mat-button color="primary" (click)="getById(searchForm.value.participantId)" class="search-button">
+                    <mat-icon>search</mat-icon>Search
+                </button>
+            </form>
+        </mat-card>
+    <mat-card class="example-card" *ngIf="participant" style="margin: auto; max-width: 400px; margin-top: 20px;">
+        <mat-card-title>Participant Details</mat-card-title>
+        <img mat-card-sm-image class="image"
+            src="https://tse4.mm.bing.net/th/id/OIP.d2MVhKeeUd54NXxjUwWxPgHaHa?pid=ImgDet&rs=1">
+        <mat-card-content>
+            <table>
+                <tr>
+                    <td class="td">Participant Id:</td>
+                    <td>{{ participant.participantId }}</td>
+                    <br>
+                </tr>
+                <tr>
+                    <td class="td">Participant Name:</td>
+                    <td>{{ participant.participantName }}</td>
+                </tr>
+                <tr>
+                    <td class="td">Age Group:</td>
+                    <td>{{ participant.ageGroup.ageGroupName }}</td>
+                </tr>
+                <!-- <tr>
+                    <td class="td">Sports:</td>
+                    <td>{{ participant.sports.sportsName }}</td>
+                </tr> -->
+                <tr>
+                    <td class="td">Category:</td>
+                    <td>{{ participant.sports.sportsCategory.categoryName }}</td>
+                </tr>
+                <tr>
+                    <td class="td">Organization:</td>
+                    <td>{{ participant.organization.organizationName }}</td>
+                </tr>
+                <!-- <tr>
+                    <td>QRCode</td>
+                    <td><img [src]="participant.qrCode"></td>
+
+                </tr> -->
+            </table>
+            
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>
+<br>
+<br>
+
+
+
+<!-- <mat-card>
+    <div *ngIf="participant">
+      <h3>Participant Details</h3>
+      <p><strong>Participant ID:</strong> {{ participant[participantId].participantId}}</p>
+      <p><strong>Name:</strong> {{ participant[0].participantName }}</p>
+       <p><strong>Age:</strong> {{ participant[0]. }}</p> 
+       Add more details as per your requirement 
+    </div> 
+  </mat-card> -->

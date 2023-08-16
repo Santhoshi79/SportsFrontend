@@ -1,0 +1,157 @@
+
+
+
+
+<app-navbar></app-navbar>
+
+
+<div class="form" style="padding-left: 35%; margin-top: 50px;" >
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <div >
+          <mat-card-title><h2>Edit Partipant</h2></mat-card-title>
+        </div>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+
+
+      <form [formGroup]="participantForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Participant Id:</mat-label>
+          <mat-hint>Please enter participant Id start with 'P'</mat-hint>
+          <input matInput type="text" formControlName="participantId" readonly>
+          <mat-error *ngIf="participantForm.controls['participantId'].invalid">Please enter a valid participant ID</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" >
+          <mat-label>Participant Name:</mat-label>
+          <input matInput type="text" formControlName="participantName" pattern="[A-Za-z ]*" required>
+          <mat-error *ngIf="participantForm.controls['participantName'].invalid">Please enter a valid participant name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Age Group:</mat-label>
+          <mat-select formControlName="ageGroupId">
+            <mat-option *ngFor="let ageGroup of ageGroups" [value]="ageGroup.ageGroupId">{{ ageGroup.ageGroupName }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="participantForm.controls['ageGroupId'].invalid">Please select a valid age group</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Organization:</mat-label>
+          <mat-select formControlName="organizationId">
+            <mat-option *ngFor="let organization of organization" [value]="organization.organizationId">{{ organization.organizationName }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="participantForm.controls['organizationId'].invalid">Please select a valid age group</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>Sports Category:</mat-label>
+          <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let category of sportsCategories" [value]="category.categoryId">{{ category.categoryName }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="participantForm.controls['categoryId'].invalid">Please select a valid sports category</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" >
+          <mat-label>Sports Name:</mat-label>
+          <mat-select formControlName="sportsId">
+            <mat-option *ngFor="let sport of sports" [value]="sport.sportsId">{{ sport.sportsName }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="participantForm.controls['sportsId'].invalid">Please select a valid sport</mat-error>
+        </mat-form-field>
+      
+
+      
+        <button mat-raised-button type="submit" color="primary" [disabled]="participantForm.invalid">Submit</button> &nbsp; &nbsp;&nbsp;&nbsp;
+        <button mat-raised-button  color="accent" routerLink="/participants" >Go Back</button>
+      </form>
+      
+          
+      
+  </mat-card-content>
+  </mat-card>
+  </div>
+  
+
+  <!-- <mat-select placeholder="Select age group" [(ngModel)]="participant.ageGroupId" (ngModelChange)="onAgeGroupSelected($event)" name="ageGroupId" required>
+    <mat-option *ngFor="let ageGroup of age" [value]="ageGroup">
+      {{ ageGroup.ageGroupName }}
+    </mat-option>
+  </mat-select> -->
+
+  <!-- <div class="form" style="padding-left: 35%;">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <div class="form">
+          <mat-card-title><h2>Register</h2></mat-card-title>
+        </div>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="para">
+        <form [formGroup]="registerForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Participant Id</mat-label>
+            <input matInput placeholder="participantId"  formControlName="participantId">
+            <mat-icon matSuffix></mat-icon>
+            <mat-hint></mat-hint>
+            <mat-error>please provide input Participant Id</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Participant Name</mat-label>
+            <input matInput placeholder="participantName"  formControlName="participantName">
+            <mat-icon matSuffix></mat-icon>
+            <mat-error>please provide input Participant Name</mat-error>
+            <mat-hint></mat-hint>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Age</mat-label>
+            <mat-select placeholder="Select age" formControlName="ageGroupId">
+              <mat-option *ngFor="let age of age" [value]="age.value">{{ age.label }}</mat-option>
+            </mat-select>
+            <mat-hint></mat-hint>
+            <mat-error>please Select Option</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Organization Name</mat-label>
+            <mat-select placeholder="Select organization" formControlName="organizationId">
+              <mat-option *ngFor="let org of organization" [value]="org.value">{{ org.label }}</mat-option>
+            </mat-select>
+            <mat-error>please Select Option</mat-error>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Sports Category</mat-label>
+            <mat-select placeholder="select category" formControlName="categoryId">
+              <mat-option *ngFor="let cat of category" [value]="cat.value">{{cat.label}}</mat-option>
+            </mat-select>
+            <mat-error>please Select Option</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Sports name</mat-label>
+            <mat-select placeholder="Select sport" formControlName="sportsId">
+              <mat-option *ngFor="let sport of sports" [value]="sport.value">{{ sport.label }}</mat-option>
+            </mat-select>
+            <mat-error>please Select Option</mat-error>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color="accent" (click)="onSubmit()">Submit</button> &nbsp; &nbsp;&nbsp;&nbsp;
+          <button mat-raised-button color="primary"(click)="clearForm()">Clear</button>
+          <br>
+        </form>
+       
+      
+    </mat-card-content>
+  </mat-card>
+</div> -->

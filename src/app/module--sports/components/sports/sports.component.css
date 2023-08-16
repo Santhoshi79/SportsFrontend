@@ -1,0 +1,62 @@
+.example-card {
+  max-width: 400px;
+  background-image: url('https://images.pexels.com/photos/773063/pexels-photo-773063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); */
+}
+
+.example-card:hover {
+  box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.title {
+  color: rgb(232, 232, 232);
+}
+
+.color {
+  color: rgb(232, 232, 232);
+}
+
+.content {
+  padding-left: 30%;
+}
+
+
+.parent-button {
+  margin-left: 600%;
+  transform: translateX(-100%);
+  position: relative;
+  display: inline-block;
+  padding: 2px 4px;
+  size: 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.child-button {
+  margin-right: 500%;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.parent-button:hover .child-button {
+  display: block;
+}
+
+.move {
+  text-align: end;
+
+}

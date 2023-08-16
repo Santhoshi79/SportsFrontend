@@ -1,0 +1,285 @@
+/* .para{
+    text-align: center;
+}
+.form{
+    text-align: center;
+    size: 200px;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+
+
+  .input{
+    width: 100%;
+  }
+
+  .mat-form-field {
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mat-card-title{
+    padding-left: 150%;
+    text-size-adjust: 50px;
+  }
+
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .card-container.card {
+    max-width: 400px !important;
+    padding: 40px 40px;
+  }
+  
+  .card {
+    background-color: #f7f7f7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  
+  .card card-container{
+    background-image: url('https://wallpapercave.com/wp/wp2940452.jpg');
+  }
+
+  .button{
+    transform: scale(1.2);
+  } */
+
+  .group {
+    position: relative;
+  }
+  
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 120px 40px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: rgb(7, 4, 40);
+    border-radius: 20px;
+    position: relative;
+
+    height: 400px;
+    width:400px
+  }
+
+  
+  .form p {
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    color: white;
+  }
+  
+  .container-1 {
+    padding-top: 30px;
+  }
+  
+  .main-input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 185px;
+    border: none;
+    border-bottom: 1px solid #6c6c6c;
+    background: transparent;
+    color: #ffffff;
+  }
+  
+  .main-input:focus {
+    outline: none;
+    border-bottom-color: #42ff1c;
+  }
+  
+  .lebal-email {
+    color: #999999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .main-input:focus ~ .lebal-email,
+  .main-input:valid ~ .lebal-email {
+    top: -20px;
+    font-size: 14px;
+    color: #42ff1c;
+  }
+  
+  .highlight-span {
+    position: absolute;
+    height: 60%;
+    width: 0px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .main-input:focus ~ .highlight-span {
+    -webkit-animation: input-focus 0.3s ease;
+    animation: input-focus 0.3s ease;
+  }
+  
+  @keyframes input-focus {
+    from {
+      background: #42ff1c;
+    }
+  
+    to {
+      width: 185px;
+    }
+  }
+  
+  .submit {
+    margin-top: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  .login{
+    padding-left: 30%;
+   
+  }
+  
+
+  .social-message {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  .line {
+    height: 1px;
+    flex: 1 1 0%;
+    background-color: rgba(55, 65, 81, 1);
+  }
+  
+  .social-message .message {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgba(156, 163, 175, 1);
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons .icon {
+    border-radius: 0.125rem;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    margin-left: 8px;
+  }
+  
+  .social-icons .icon svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: #fff;
+  }
+  
+  .signup {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(156, 163, 175, 1);
+  }
+  .forms{
+    padding-left: 60%;
+  }
+
+  button {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+   }
+   
+   button:active,
+   button:hover {
+    outline: 0;
+   }
+   
+   button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+   }
+   
+   button:hover span {
+    background: none;
+   }
+   
+   button:active {
+    transform: scale(0.9);
+   }

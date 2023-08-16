@@ -1,0 +1,23 @@
+.footer{
+    flex-shrink: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+}
+.tool{
+    background-color: rgb(68, 64, 65);
+  }
+
+  .tool .p {
+    color: white;
+    font-size: 14px; 
+    text-align: center  !important;
+    margin: 0 auto;
+    display: table;
+  }
+
+  .tool .mat-toolbar {
+    height: 40px; 
+  }

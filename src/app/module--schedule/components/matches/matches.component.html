@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div style="margin-top: 80px;"></div>
+
+<div class="container mt-4">
+    <div class="row justify-content-start">
+      
+        <div class="col-md-4 mb-4" *ngFor="let matches of match">
+        <mat-card class="example-card" >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <p *ngFor="let participant of matches?.participant"></p>
+          <mat-card-title class="title">
+            <div style="display: inline;" *ngFor="let participant of matches?.team1Id?.participant">{{ participant.participantName }}</div>
+            <img src="https://th.bing.com/th/id/R.6afd5ca5463fba37645dde49b630e337?rik=5wPiTfIyQ%2b3%2bGQ&riu=http%3a%2f%2fimg.yipic.cn%2fthumb%2f2186ccc8%2f033d2e6a%2fcd824a2f%2f6522c101%2fbig_2186ccc8033d2e6acd824a2f6522c101.png%3fx-oss-process%3dimage%2fformat%2cwebp%2fsharpen%2c100&ehk=D3V5%2fLUxRLZhdQKH56foJM90FdyUT9MjL%2bKNiiP8PuA%3d&risl=&pid=ImgRaw&r=0" style="height: 50px; width: 50px;">
+            <div style="display: inline;" *ngFor="let participant of matches?.team2Id?.participant">{{ participant.participantName }}</div>
+          </mat-card-title>
+          
+    
+          <mat-card-subtitle>{{ matches.event.eventName }}</mat-card-subtitle>
+          
+        </mat-card-header>
+        <mat-card-content class="content">
+            <p><b>Venue:</b> &nbsp; {{ matches.venue }}</p>
+            <p><b>Start Time:</b> &nbsp;{{ matches.event.startTime |date:'dd MMM yyyy HH:mm'}}</p>
+            <p><b>End Time :</b> &nbsp; {{ matches.event.endTime |date:'dd MMM yyyy HH:mm' }}</p>
+            <p> &nbsp; <br> </p>
+          <p> </p>
+          <!-- <table>
+            <tr>
+              <td><b>Venue:</b></td>
+              <td>{{ matches.venue }}</td>
+            </tr>
+            <tr>
+              <td><b>Start Time:</b></td>
+              <td>{{ matches.event.startTime |date:'dd MMM yyyy HH:mm'}}</td>
+            </tr>
+            <tr>
+              <td><b>End Time:</b></td>
+              <td>{{ matches.event.endTime |date:'dd MMM yyyy HH:mm' }}</td>
+            </tr>
+          </table> -->
+          <div>
+            <button mat-button color="warn" (click)="shareFixture()">Share<mat-icon>share</mat-icon></button>
+          </div>
+          
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+      </div>
+      </div>
+      </div>
+      

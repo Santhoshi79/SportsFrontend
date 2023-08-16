@@ -1,0 +1,15 @@
+.example-card {
+    max-width: 400px;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5fe569c80f363038971fc34c/1620330942864-0QNEZKHTDXNLTEZ4GXXM/Screen%2BShot%2B2021-05-06%2Bat%2B3.54.13%2BPM.jpg?format=1000w');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.example-card:hover {
+    box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .example-header-image {
+    background-image: url('https://image.shutterstock.com/image-vector/match-day-soccer-logo-american-600w-766929241.jpg');
+    background-size: cover;
+  }

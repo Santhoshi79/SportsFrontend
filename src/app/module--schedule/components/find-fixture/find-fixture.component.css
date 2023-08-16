@@ -1,0 +1,46 @@
+.search{
+    text-align: center;
+}
+
+.td{
+    font-weight: bold;
+}
+
+.image{
+    float: right; 
+    margin-right: 16px;
+}
+.main{
+    background-image: url('https://tse4.mm.bing.net/th/id/OIP.Rw-Ax6KKOanXl74v7KBo7wHaEv?pid=ImgDet&rs=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.matfix{
+    background-image: url('https://th.bing.com/th/id/R.51bbe0c84edb74b906e836180af933f6?rik=16%2bqrsfRkMLOzQ&riu=http%3a%2f%2fwww.sportstouch.com%2fwp-content%2fuploads%2f2016%2f08%2fNESLogo.jpg&ehk=hCfGiv9mG0noW4y9m6L3Pw7NnEziu3ax%2bvuNHJGrSVg%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+} 
+
+.search-button {
+    position: relative;
+   left: 30px;
+}
+
+.example-header-image {
+    background-image: url('https://image.shutterstock.com/image-vector/match-day-soccer-logo-american-600w-766929241.jpg');
+    background-size: cover;
+  }
+
+/* .container{
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.IUTI8a2_W2B5ZxAsoWM_zQHaC5?pid=ImgDet&rs=1');
+
+} */
+
+.example-card:hover {
+    box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  

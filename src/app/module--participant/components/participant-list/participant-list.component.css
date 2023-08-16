@@ -1,0 +1,59 @@
+table {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .container {
+    margin-top: 20px; 
+    
+  }
+  .search {
+    width: 20%;
+    margin-left: 75%;
+    border: 20px;
+  }
+  .title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+  }
+  .add{
+    font-size: large;
+  }
+
+  .text{
+    font-weight: bold;
+  }
+
+  th{
+    font-weight: bold;
+    font-size: small;
+    color: rgb(4, 11, 101);
+    background-color: rgb(120, 212, 212);
+    background-color: azure;
+  }
+
+  .image{
+    background-image: url('https://wallpapercave.com/wp/wp2940452.jpg');
+    
+  }
+
+  th{
+    background-color: azure;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 60px; /* Change this value to match the height of your navigation bar */
+    background-color: #fff;
+    z-index: 500;
+  }
+  .button:hover{
+    transform: scale(1.2);
+  }
+  /* mat-cell:hover{
+    transform: scale(1.2);
+  } */

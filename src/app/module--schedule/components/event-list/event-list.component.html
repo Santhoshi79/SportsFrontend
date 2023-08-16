@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="images">
+    <div class="color">
+<mat-form-field class="search" appearance="outline" style=" margin-top: 60px;">
+    <mat-label class="color">Filter</mat-label>
+    <input matInput type="text" id="search">
+</mat-form-field>
+</div>
+
+<div class="container">
+    <div style="margin-top: 10px;">
+        <div>
+            <!-- <h1 class="head">Event List</h1> -->
+            
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" >
+
+                <ng-container matColumnDef="eventId" >
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header  class="sticky-header"> Event Id </th>
+                    <td mat-cell *matCellDef="let event"> {{event.eventId}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="eventName">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header  class="sticky-header"> Event Name </th>
+                    <td mat-cell *matCellDef="let event"> {{event.eventName}} </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="startTime">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header  class="sticky-header"> Start Time</th>
+                    <td mat-cell *matCellDef="let event"> {{event.startTime | date}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="endTime">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header  class="sticky-header"> End Time</th>
+                    <td mat-cell *matCellDef="let event"> {{event.endTime | date}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+        </div>
+
+    </div>
+</div>
+</div>
+

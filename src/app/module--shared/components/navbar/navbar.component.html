@@ -1,0 +1,85 @@
+<!-- <p>
+    <mat-toolbar class="tool" color="primary">
+  
+      <span class="title">FalconSportsClub</span>
+      <span class="example-spacer"></span>
+      <a mat-button aria-current="page" routerLink="" style="color: aliceblue; font-size: small;"> <mat-icon>home</mat-icon></a>
+      <a mat-button aria-current="page" routerLink="/games">Category</a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <a mat-button aria-current="page" routerLink="/sports">Sports List</a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <a mat-button aria-current="page" routerLink="/participants">Participant</a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <a mat-button aria-current="page" routerLink="/findParticipant">Find Participant</a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <a mat-button aria-current="page" routerLink="/details">Details</a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <a  mat-button (click)="logout()" class="logout">Logout</a>
+      <a mat-button aria-current="page" routerLink="/help"><mat-icon>help</mat-icon></a>
+    </mat-toolbar>
+  </p>
+  
+  
+
+   -->
+
+<div class="images">
+   <mat-toolbar class="tool" color="primary">
+    <span class="title" routerLink="/front">FalconSportsClub </span><mat-icon> directions_bike</mat-icon>
+    <span class="example-spacer"> </span>&nbsp; &nbsp;
+    <a mat-button aria-current="page" routerLink="/front" style="color: aliceblue; font-size: small;"><mat-icon>home</mat-icon></a>
+    
+    <mat-menu #sportsMenu="matMenu">
+      <button mat-menu-item routerLink="/games" ><mat-icon> category</mat-icon>Sports Category</button>
+      <button mat-menu-item routerLink="/sports"><mat-icon>list</mat-icon>Sports List</button>
+      <button mat-menu-item routerLink="/findwinners"><mat-icon>search</mat-icon>Find Winners</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="sportsMenu" routerLinkActive="active-link">Sports<mat-icon>expand_more</mat-icon></button>
+    &nbsp;&nbsp;&nbsp;
+    <mat-menu #participantsMenu="matMenu">
+      <button mat-menu-item routerLink="/participants"><mat-icon>list</mat-icon>Participant List</button>
+      <!-- <button mat-menu-item routerLink="/registerparticipant">Register Participant</button> -->
+      <button mat-menu-item routerLink="/findParticipant"><mat-icon>search</mat-icon>Find Participant</button>
+      <button mat-menu-item routerLink="/findwinners"><mat-icon>search</mat-icon>Find Winners</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="participantsMenu" routerLinkActive="active-link">Participants<mat-icon>expand_more</mat-icon></button>
+    &nbsp;&nbsp;&nbsp;
+
+    <mat-menu #scheduleMenu="matMenu" >
+      <button mat-menu-item routerLink="/schedule"><mat-icon>schedule</mat-icon>Schedule</button>
+      <button mat-menu-item routerLink="/matches"><mat-icon>list</mat-icon>Match List</button>
+      <button  mat-menu-item routerLink="/eventlist"><mat-icon>event</mat-icon>Event List</button>
+      <button mat-menu-item routerLink="/findfixture"><mat-icon>search</mat-icon>Find Fixture</button>
+      
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="scheduleMenu" >Schedule<mat-icon>expand_more</mat-icon></button>
+    &nbsp;&nbsp;&nbsp;
+    <mat-menu #teamMenu="matMenu">
+      <button mat-menu-item routerLink="/generateTeam">Generate team</button>
+      <button mat-menu-item routerLink="/generateSchedule">Generate Schedule</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="teamMenu">Team<mat-icon>expand_more</mat-icon></button>
+
+    <mat-menu #registerMenu="matMenu">
+      <button mat-menu-item routerLink="/registerparticipant"><mat-icon>person_add</mat-icon>Register Participant</button>
+      <button mat-menu-item routerLink="/registerorganization"><mat-icon>group_add</mat-icon>Register Organization</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="registerMenu">Register<mat-icon>expand_more</mat-icon></button>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    <a mat-button aria-current="page"  routerLink="/details">More</a>
+    
+    <a mat-button  routerLink="/contact">Contact Us&nbsp; <mat-icon> mail_outline</mat-icon></a>&nbsp;
+    <a mat-button aria-current="page" routerLink="/help">Help<mat-icon>help_outline</mat-icon></a>
+    <a mat-button aria-current="page" (click)="logout()"><mat-icon>logout</mat-icon></a>
+  </mat-toolbar>
+  </div>

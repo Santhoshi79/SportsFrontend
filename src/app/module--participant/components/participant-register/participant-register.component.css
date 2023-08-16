@@ -1,0 +1,62 @@
+.para{
+    text-align: center;
+}
+.form{
+    text-align: center;
+    size: 150px;
+    padding-top: 2%;
+    padding-bottom: 10%;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+    
+  }
+
+
+  .input{
+    width: 100%;
+  }
+
+  .mat-form-field {
+    display: flexbox;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mat-card-title{
+    align-items: center;
+    padding-left: 110%;
+    text-size-adjust: 50px;
+  }
+
+  h2{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+  }
+
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .card-container.card {
+    max-width: 400px !important;
+    padding: 40px 40px;
+  }
+  
+ 
+  .form{
+    background-image: url('https://images.pexels.com/photos/54330/softball-baseball-ball-sport-54330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .button:hover{
+    transform: scale(1.2);
+  }

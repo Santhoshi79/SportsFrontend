@@ -1,0 +1,80 @@
+<app-navbar style="position: relative; z-index: 1;"></app-navbar>
+<div  style=" margin-top: 130px;">
+<div class="container mt-4" style=" margin-top: 80px;">
+
+        <mat-card class="example-card" style="margin: auto; max-width: 400px;">
+            <form [formGroup]="searchForm">
+                <mat-card-title>
+                    <h3></h3>
+                    <div mat-card-avatar class="example-header-image"></div>
+                </mat-card-title>
+                <mat-form-field class="search" appearance="outline">
+                    <mat-label>Search Fixture</mat-label>
+                    <input matInput type="text" matInput placeholder="fixtureId" formControlName="fixtureId">
+                    <mat-hint> Note:Enter the Fixture Id Properly</mat-hint>
+                    <mat-error>Please Enter Fixture Id</mat-error>
+                </mat-form-field>
+                <button mat-button color="primary" (click)="getByFixtureId(searchForm.value.fixtureId)" class="search-button">
+                    <mat-icon>search</mat-icon>Search
+                </button>
+            </form>
+        </mat-card>
+    <mat-card class="example-card" *ngIf="fixture" style="margin: auto; max-width: 500px; margin-top: 20px;" class="matfix">
+        <mat-card-title>Fixture Details</mat-card-title>
+        <img mat-card-sm-image class="image"
+            src="https://tse2.mm.bing.net/th/id/OIP.mLoMuYctk9tQgq-I8jkVewHaHa?pid=ImgDet&w=640&h=640&rs=1">
+        <mat-card-content>
+            <table>
+                <tr>
+                    <td class="td">Fixture Id:</td>
+                    <td>{{ fixture.fixtureId }}</td>
+                    <br>
+                </tr>
+                <tr>
+                    <td class="td">Event Name:</td>
+                    <td>{{ fixture.event.eventName }}</td>
+                </tr>
+                <tr>
+                    <td class="td">Team 1 Participant</td>
+                    <td>{{fixture.team1Id.participant.participantName}}</td>
+                </tr>
+                <!-- <tr>
+                    <td class="td">Team 1 Organization</td>
+                    <td>{{fixture.team1Id.participant.sports.organization.organizationName}}</td>
+                </tr> -->
+                <tr>
+                    <td class="td">Team 2 Participant</td>
+                    <td>{{fixture.team2Id.participant.participantName}}</td>
+                </tr>
+                <!-- <tr>
+                    <td class="td">Team 2 Organization</td>
+                    <td>{{fixture.team2Id.participant.sports.organization.organizationName}}</td>
+                </tr>-->
+                <tr> 
+                    <td class="td">Sports Name:</td>
+                    <td>{{ fixture.sports.sportsName}}</td>
+                </tr>
+
+                <tr>
+                    <td class="td">Venue</td>
+                    <td>{{ fixture.venue}}</td>
+                </tr>
+
+                <tr>
+                    <td class="td">start time</td>
+                    <td>{{ fixture.event.startTime |date:'dd MMM yyyy HH:mm'}}</td>
+                </tr>
+
+                <tr>
+                    <td class="td">End time</td>
+                    <td>{{ fixture.event.endTime |date:'dd MMM yyyy HH:mm'}}</td>
+                </tr>
+
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+</div>
+<br>
+<br>

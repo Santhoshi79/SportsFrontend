@@ -1,0 +1,21 @@
+<app-navbar>
+</app-navbar>
+
+<div style="margin-top: 90px;"></div>
+
+<button mat-raised-button  color="primary" (click)="generateTeam()">Generate Team</button>
+<div class="container">
+    <div class="row" >
+        <div class="col md-4" *ngFor="let t of team" >
+            <mat-card class="card">
+                <div>
+                    <h2>{{ t.teamName }}</h2>
+                    <h3 *ngFor="let participant of t?.participant">
+                        Participant Name: {{ participant?.participantName}}
+                    </h3>
+                    <p>Sports Name: {{ t?.sports?.sportsName }}</p>
+                  </div>    
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.center{
+    align-content: center;
+}
+.example-card {
+    max-width: 400px;
+    padding:auto;
+    
+  }
+  
+  .example-header-image {
+    background-image: url('https://campsouthafrica.com/wp-content/uploads/2020/02/camp-south-africa-sports.png');
+    background-size: cover;
+  }
+  .image{
+    width: 350px;
+    height: 270px;
+  }
+  .full-width-dialog .mat-dialog-container {
+    max-width: 100vw !important;
+  }
+
+  .subtitle{
+    padding-right: 250%;
+  }
+
+  .move{
+    text-align: right;
+    float: right;
+
+  }
+  .bg{
+    background-color: rgb(2, 2, 75);
+  }
+
+  .card{
+    width: 200px;
+   
+  }
+
+  .btns{
+    width: 100px;
+  }

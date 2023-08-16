@@ -1,0 +1,14 @@
+.example-card {
+    width: 300px;
+   height: 350px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://tse3.mm.bing.net/th/id/OIP.sOSfHsqQ7WfsPFg-ln65igAAAA?pid=ImgDet&w=400&h=400&rs=1');
+    background-size: cover;
+  }
+
+  .images{
+    max-width: 300px;
+    max-height: 400px;
+  }

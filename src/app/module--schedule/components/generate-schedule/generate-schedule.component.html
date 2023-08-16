@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+
+<div style="margin-top: 80px;"></div>
+
+<mat-card>
+  <mat-card-content>
+    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+
+      <!-- Selecting events -->
+      <mat-step [stepControl]="firstFormGroup">
+        <ng-template matStepLabel>Select Event</ng-template>
+        <form [formGroup]="firstFormGroup">
+          <mat-form-field>
+            <mat-label>Event</mat-label>
+            <mat-select formControlName="eventId">
+              <mat-option *ngFor="let eve of event" [value]="eve.eventId">{{ eve.eventName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="stepper-buttons">
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Selecting sports -->
+      <mat-step [stepControl]="secondFormGroup">
+        <ng-template matStepLabel>Select Sports</ng-template>
+        <form [formGroup]="secondFormGroup">
+          <mat-form-field>
+            <mat-label>Sports</mat-label>
+            <mat-select formControlName="sportsId">
+              <mat-option *ngFor="let spo of sports" [value]="spo.sportsId">{{ spo.sportsName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="stepper-buttons">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Selecting teams -->
+      <mat-step [stepControl]="thirdFormGroup">
+        <ng-template matStepLabel>Select Teams</ng-template>
+        <form [formGroup]="thirdFormGroup">
+          <mat-form-field>
+            <mat-label>Team 1</mat-label>
+            <mat-select formControlName="team1">
+              <mat-option *ngFor="let t of team" [value]="t.teamId">{{ t.teamName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Team 2</mat-label>
+            <mat-select formControlName="team2">
+              <mat-option *ngFor="let t of team" [value]="t.teamId">{{ t.teamName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="stepper-buttons">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Venue and Time -->
+      <mat-step [stepControl]="fourthFormGroup">
+        <ng-template matStepLabel>Venue and Time</ng-template>
+        <form [formGroup]="fourthFormGroup">
+          <mat-form-field>
+            <mat-label>Venue</mat-label>
+            <mat-select formControlName="venue">
+              <mat-option value="ChinnaSwamy Stadium">ChinnaSwamy Stadium</mat-option>
+              <mat-option value="Kanteerava Stadium">Kanteerava Stadium</mat-option>
+              <mat-option value="Sachin Tendulkar Field">Sachin Tendulkar Field</mat-option>
+              <mat-option value="P T Usha Sports Center">P T Usha Sports Center</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>Date And Time</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dateTime">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <div class="stepper-buttons">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!-- Done -->
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div class="stepper-buttons">
+          <button mat-button [disabled]="firstFormGroup.invalid || secondFormGroup.invalid || thirdFormGroup.invalid || fourthFormGroup.invalid" (click)="onSubmit()">Submit</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </mat-card-content>
+</mat-card>

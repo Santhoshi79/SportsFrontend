@@ -1,0 +1,223 @@
+.images{
+    max-width: 100%;
+    height: 500px;
+    width: 100%;
+}
+
+/* Reset the default styles for all HTML elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background color and font for the entire page */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* Add styles for the header section */
+header {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Add styles for the logo image */
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add styles for the navigation menu */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: #1a237e;
+}
+
+/* Add styles for the main content section */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Add styles for the latest news section */
+.news {
+    margin-bottom: 30px;
+}
+
+.news h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.news article {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.news article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.news article p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Add styles for the scores table */
+.scores {
+    margin-bottom: 30px;
+}
+
+.scores h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.scores table1 {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.scores th, .scores td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.scores th {
+    background-color: #eee;
+}
+
+.scores td:first-child {
+    text-align: left;
+}
+
+/* Add styles for the sports section */
+.sports {
+    margin-bottom: 30px;
+}
+
+.sports h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sport {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sport img {
+    max-width: 50%;
+    height: auto;
+}
+.sport img:hover{
+    box-shadow: 0px 40px 50px rgba(18, 12, 196, 0.2);
+    transform: scale(0.9);
+}
+
+
+.sport h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sport p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Add styles for the "Learn More" buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #1a237e;
+}
+
+/* .fimage{
+    width: 50px;
+    height: 50px;
+} */
+
+h1{
+    color: #1a237e;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 10px;
+    font-size: xx-large;
+
+}
+
+h3{
+    color: #1a237e;
+}
+
+h2{
+    color: #1a237e;
+}
+
+.example-card {
+    max-width: 400px;
+    
+  }
+
+  .reg{
+    padding-left: 30%;
+    margin-top: 20px;
+  }
+
+  .example-card:hover {
+    box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+
+  table{
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 10%;
+  }
+
+  th{
+    color: #1a237e;
+    background-color: wheat;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 60px; /* Change this value to match the height of your navigation bar */
+    background-color: wheat;
+    z-index: 500;
+  }

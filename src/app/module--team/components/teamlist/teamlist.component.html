@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="image" style=" margin-top: 60px;">
+    <mat-form-field class="search" appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput type="text" id="search">
+    </mat-form-field>
+    
+    <div class="container">
+        <div style="margin-top: 10px;">
+            <div>
+                
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+                    <ng-container matColumnDef="teamId" >
+                        <th mat-header-cell *matHeaderCellDef  class="sticky-header"> Team Id </th>
+                        <td mat-cell *matCellDef="let team"> {{team.teamId}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="teamName">
+                        <th mat-header-cell *matHeaderCellDef  class="sticky-header"> Team Name </th>
+                        <td mat-cell *matCellDef="let team"> {{team.teamName}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="participant.participantName">
+                        <th mat-header-cell *matHeaderCellDef  class="sticky-header"> Participant Name</th>
+                        <td mat-cell *matCellDef="let team"> {{team.participant.participantName}} </td>
+                    </ng-container>
+    
+    
+                    <ng-container matColumnDef="sports.sportsName">
+                        <th mat-header-cell *matHeaderCellDef  class="sticky-header"> Sports Name</th>
+                        <td mat-cell *matCellDef="let team"> {{ team.sports.sportsName}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="sports.sportsCategory.categoryName">
+                        <th mat-header-cell *matHeaderCellDef  class="sticky-header"> Sports Category </th>
+                        <td mat-cell *matCellDef="let team"> {{team.sports.sportsCategory.categoryName}} </td>
+                    </ng-container>
+    
+    
+
+    
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    
+                </table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    
+            </div>
+    
+        </div>
+    </div>
+    </div>

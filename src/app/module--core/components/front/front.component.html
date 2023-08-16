@@ -1,0 +1,274 @@
+<app-navbar></app-navbar>
+
+<div>
+<div style="margin-top: 60px;">
+	<section class="hero">
+		<div class="content" style="background-color: rgb(4, 4, 78); ">
+			<br>
+			
+			<h1 style="color: #ffffff; text-align: center;"><b>Welcome to Falcon Sports Club<br></b></h1>		
+	<!-- <img class="images" src="https://images-na.ssl-images-amazon.com/images/I/81Rxne5Cv2L.jpg"> -->
+	
+	<!-- <img class="images" src="https://th.bing.com/th/id/R.01512fdde0f135ba1fadb913e997afc0?rik=pF22MMnpuTOEtg&riu=http%3a%2f%2fyourcourts.com%2fimages%2fall-sports-background.jpg&ehk=SYhbYT6YWXLFCjGteoDFldSAJWgqYvAupePrsa3FGiQ%3d&risl=&pid=ImgRaw&r=0"> -->	
+</div>
+
+
+
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true" style="margin-top: -16px;" >
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<img src="https://thumbs.dreamstime.com/z/young-players-of-soccer-team-lift-up-golden-cup-trophy-winning-final-soccer-match-children-celebrrate-success-sports-149060858.jpg" style="height: 500px; width:100%">
+	  </div>
+	  <div class="carousel-item">
+		<img src="http://l3.yimg.com/uu/api/res/1.2/uTLLk59agzVFvBxeKDLTmg--~B/aD0xOTA0O3c9Mjg1NjtzbT0xO2FwcGlkPXl0YWNoeW9u/http://l.yimg.com/os/153/2013/09/30/182272353-10-jpg_050929.jpg" style="height: 500px; width:100%" >
+	  </div>
+	  <div class="carousel-item">
+		<img src="https://mpasummercamp.org/home/wp-content/uploads/2020/02/636643184445615606-Child-Playing-Soccer-scaled.jpg" style="height: 500px; width:100%">
+	  </div>
+	  <div class="carousel-item">
+		<img src="https://bronchiectasis.com.au/wp-content/uploads/2015/09/Exercise-team.jpg" style="height: 500px; width:100%">
+	  </div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</button>
+  </div>
+
+
+  
+
+		<section class="hero">
+			<div class="content">
+				<br>
+				
+				<!-- <h1><b>Welcome to Falcon Sports Club</b></h1> -->
+				<p  style="margin-left: 25px; "><b> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; We are a premier sports club offering a variety of sports for athletes of all ages and skill levels.
+					Falcon Sports Club is a popular sports club that caters to people who are passionate about sports. The club offers a wide range of sports activities, 
+					including football, basketball, tennis, volleyball, and many others. The club provides facilities for both indoor and outdoor sports activities,
+					 making it an ideal place for sports enthusiasts to come and indulge in their favorite sports.</b></p>
+			</div>
+
+			<!-- <div class="fimage">
+				<img src="https://cdn4.vectorstock.com/i/1000x1000/48/13/sport-club-logo-template-vector-2224813.jpg">
+			</div> -->
+		</section>
+		
+		<section class="hero">
+			<div class="content">
+				<marquee behavior="scroll" direction="left">
+					<h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: xx-large; text-align: center;">
+					Celebrating 25 Years of Sports: <b>Falcon Sports Club's Silver Jubilee</b></h2>
+					</marquee>
+			
+				<p style="margin-left:25px"><b>  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Falcon Sports Club recently celebrated its silver jubilee, marking 25 years since its inception. The club, founded in 1998, has become a prominent institution in the local community, 
+					known for its commitment to promoting sports and physical fitness. Over the years, Falcon Sports Club has organized numerous events and tournaments, including football, cricket, basketball, and athletics, among others. The club has also contributed significantly to the development of young athletes, providing them with a platform to showcase their talent and hone their skills. The success of the club is attributed to the dedication of its members, who have worked tirelessly to ensure that it remains a thriving organization. 
+					As Falcon Sports Club enters its next phase, it is poised to continue its legacy of promoting sports and healthy living, while remaining an integral part of the community.</b></p>
+			</div>
+		</section>
+		
+<div class="winners">
+	<h2 style="text-align: center;">Winners List</h2>
+	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+		<ng-container matColumnDef="winner" >
+			<th mat-header-cell *matHeaderCellDef class="sticky-header" > Winners </th>
+			<td mat-cell *matCellDef="let winners"> {{winners.winner}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="year">
+			<th mat-header-cell *matHeaderCellDef class="sticky-header" > Year </th>
+			<td mat-cell *matCellDef="let winners"> {{winners.year}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="totalGames">
+			<th mat-header-cell *matHeaderCellDef class="sticky-header" > Total Games</th>
+			<td mat-cell *matCellDef="let winners"> {{winners.totalGames}} </td>
+		</ng-container>
+
+
+		<ng-container matColumnDef="points">
+			<th mat-header-cell *matHeaderCellDef class="sticky-header"> Points</th>
+			<td mat-cell *matCellDef="let winners"> {{winners.points}} </td>
+		</ng-container>
+
+
+		<ng-container matColumnDef="image">
+			<th mat-header-cell *matHeaderCellDef class="sticky-header">Logo</th>
+			<td mat-cell *matCellDef="let winners">
+			  <img [src]="winners.image" alt="Logo" width="100" height="100">
+			</td>
+		  </ng-container>
+		  
+
+		<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+	</table>
+	<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users" style=" width: 80%;
+    margin-top: 5px;
+    margin-left: 10%;"></mat-paginator>
+</div>
+
+
+
+		<div class="reg">
+			<mat-card class="example-card">
+				<mat-card-header>
+				  <mat-card-subtitle></mat-card-subtitle>
+				  <mat-card-title style="color: rgb(5, 5, 92); text-align: center;">Registered</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+				  <p>&nbsp; &nbsp; &nbsp; Total Participants Registered : <b>{{countParticipant}}</b></p>
+				  <p>&nbsp; &nbsp; &nbsp; Total Organization Registered : <b>{{countOrg}}</b></p>
+				  <mat-divider></mat-divider>
+				</mat-card-content>
+				<mat-card-actions>
+				  <button mat-button color="primary" routerLink="/participants">Participants</button>
+				  <button mat-button color="warn"routerLink="/details" style="padding-left: 20%;">Organizations</button>
+				</mat-card-actions>
+				<mat-card-footer>
+				</mat-card-footer>
+			  </mat-card>
+		</div>
+		 
+		<div style="margin-top: 30px;">
+			<h2 style="text-align: center;">YouTube Videos</h2>
+		<iframe width="1000" height="400" src="https://www.youtube.com/embed/4nM1izVtALQ" frameborder="0" allowfullscreen style="padding-left: 5cm;"></iframe>
+	</div>
+		<div class="container" style="margin-left: 25px;">
+		<section class="news">
+			<h2>Latest News</h2>
+			<div class="article">
+				<h3><b>IPL 2023: RCB's Rajat Patidar Ruled Out For Entire Season, Replacement Yet To Be Announced</b></h3>
+				<p>Royal Challengers Bangalore (RCB) top-order batter Rajat Patidar was on Tuesday ruled out of the entire IPL season due to an Achilles heel injury, dealing a big blow to the team.
+
+          The 29-year-old was RCB's third-highest scorer last year with 333 runs in eight matches at 55.50, including two fifties. He hit the fastest century by an Indian in IPL in the Qualifier 1.
+          
+          "Unfortunately, Rajat Patidar has been ruled out of IPL2023 due to an Achilles Heel injury," said RCB in a statement.</p>
+				<a href="https://www.outlookindia.com/sports/rcb-s-rajat-patidar-ruled-out-for-entire-season-replacement-yet-to-be-announced-news-275924" class="btn">Read More</a>
+			</div>
+			<div class="article">
+        <br>
+				<h3><b>IPL 2023: Sourav Ganguly Backs Delhi's Bowling Unit To Come Good Against Gujarat Titans</b></h3>
+				<p>The Delhi Capitals will look to find form when they take on Gujarat Giants at the Arun Jaitley Stadium in their own city on Tuesday. The team will be playing at their home ground for the first time in four years. (More Cricket News)
+          Speaking ahead of the game the DC Director of Cricket Sourav Ganguly said, "Anrich Nortje is here, but we haven't picked the team yet. Khaleel and Mukesh bowled well against Lucknow. Sakariya bowled well in his first two overs but went for a few runs in his last two, which can happen in T20 cricket. We have the required attack, hopefully, we'll be fine against Gujarat."</p>
+				<a href="https://www.outlookindia.com/sports/ipl-2023-sourav-ganguly-backs-delhi-s-bowling-unit-to-come-good-against-gujarat-titans-news-275817?utm_source=related_story" class="btn">Read More</a>
+			</div>
+
+			<div class="article">
+				<br>
+						<h3><b>Cristiano Ronaldo Scores Stunning Left-Footer As Al Nassr Thrash Al-Adalah In Saudi Pro League | WATCH</b></h3>
+						<p>Cristiano Ronaldo doesn't want to stop even at 38. The former Manchester United star went back to his golden days as his stunning left-footer caught everyone's attention during Al Nassr's 5-0 thumping win against Al-Adalah in Saudi Pro League on Wednesday.</p>
+						<a href="https://www.msn.com/en-in/news/world/cristiano-ronaldo-scores-stunning-left-footer-as-al-nassr-thrash-al-adalah-in-saudi-pro-league-watch/ar-AA19tF1i" class="btn">Read More</a>
+					</div>
+		</section>
+	</div>
+
+	<!-- <div>
+		Number of participants: {{ countParticipant }}
+		Number of Organization: {{ countOrg }};
+	  </div> -->
+		<section class="scores">
+			<h2  style="margin-left: 25px;">Scores and Standings</h2>
+			<div class="sport">
+				<h3><b>Cricket</b></h3>
+				<table>
+					<tr>
+						<th>Team</th>
+						<th>Wins</th>
+						<th>Losses</th>
+						<th>Ties</th>
+					</tr>
+					<tr>
+						<td><b>UST</b></td>
+						<td>5</td>
+						<td>2</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td><b>TCS</b></td>
+						<td>4</td>
+						<td>3</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td><b>INFOSYS</b></td>
+						<td>3</td>
+						<td>4</td>
+						<td>1</td>
+					</tr>
+				</table>
+			</div>
+			<div class="sport">
+				<h3><b>Football</b></h3>
+				<table>
+					<tr>
+						<th>Team</th>
+						<th>Wins</th>
+						<th>Losses</th>
+						<th>Ties</th>
+					</tr>
+					<tr>
+						<td><b>UST</b></td>
+						<td>8</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td><b>TCS</b></td>
+            <td>6</td>
+            <td>3</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td><b>NMIT</b></td>
+            <td>4</td>
+            <td>5</td>
+            <td>0</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="sports">
+      <h2 style="text-align: center;">Our Sports</h2>
+      <div class="sport">
+        <img src="https://www.sdgyoungleaders.org/wp-content/uploads/2020/04/indian-cricket-jpg.jpeg" alt="Soccer">
+        <h3><b>Cricket</b></h3>
+        <p>Cricket is a bat-and-ball game played between two teams of eleven players on a field at the centre of which is a 22-yard (20-metre) pitch with a wicket at each end, each comprising two bails balanced on three stumps. The batting side scores runs by striking the ball bowled at one of the wickets with the bat and then running between the wickets, while the bowling and fielding side tries to prevent this </p>
+        <a href="https://en.wikipedia.org/wiki/Cricket" class="btn">Read More</a>
+      </div>
+      <div class="sport">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.WJSJ3l_aaFAUJ0n8L3EqmQHaE6?pid=ImgDet&rs=1" alt="Volleyball">
+        <h3><b>Volleyball</b></h3>
+        <p>Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team's court under organized rules. It has been a part of the official program of the Summer Olympic Games since Tokyo 1964. Beach volleyball was introduced to the programme at the Atlanta 1996 Summer Olympics. The adapted version of volleyball at the Summer Paralympic Games is sitting volleyball.</p>
+        <a href="https://en.wikipedia.org/wiki/Volleyball" class="btn">Read More</a>
+      </div>
+      <div class="sport">
+        <img src="https://www.liveabout.com/thmb/mRzowskq5hrOrtqAiwUmATcn0Hg=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/LionelMessiBarcelona-5898d9fe3df78caebca7ac0d.jpg" alt="Football">
+        <h3><b>Football</b></h3>
+        <p>Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football normally means the form of football that is the most popular where the word is used. Sports commonly called football include association football</p>
+        <a href="https://en.wikipedia.org/wiki/Football" class="btn">Read More</a>
+      </div>
+	  <div class="sport">
+        <img src="https://cdn7.dissolve.com/p/D25_45_401/D25_45_401_1200.jpg" alt="Running">
+        <h3><b>Running</b></h3>
+        <p>Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot. Running is a type of gait characterized by an aerial phase in which all feet are above the ground (though there are exceptions).[1] This is in contrast to walking, where one foot is always in contact with the ground, the legs are kept mostly straight and the center of gravity vaults over the stance leg or legs in an inverted pendulum fashion.</p>
+        <a href="https://en.wikipedia.org/wiki/Running" class="btn">Read More</a>
+      </div>
+	  <div class="sport">
+        <img src="https://th.bing.com/th/id/R.8843ee446c63c8b279f2b1c35ab790c4?rik=uaBNxiT6YAv%2fgA&riu=http%3a%2f%2fblog.mytennislessons.com%2fwp-content%2fuploads%2f2015%2f12%2f475256074_master.jpg&ehk=g9Mg0GUvFAfj9su1v5fooFg%2fWg1JzC45VpvB189XEaI%3d&risl=&pid=ImgRaw&r=0" alt="Tennis">
+        <h3><b>Tennis</b></h3>
+        <p>Tennis is a racket sport that is played either individually against a single opponent (singles) or between two teams of two players each (doubles). Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court. The object of the game is to manoeuvre the ball in such a way that the opponent is not able to play a valid return. The player who is unable to return the ball validly will not gain a point, while the opposite player will.</p>
+        <a href="https://en.wikipedia.org/wiki/Football" class="btn">Read More</a>
+      </div>
+    </section>
+</section>
+</div>
+</div>
+ 

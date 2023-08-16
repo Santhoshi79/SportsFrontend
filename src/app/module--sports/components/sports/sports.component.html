@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div style="margin-top: 80px;"></div>
+
+<div class="container mt-4" style=" margin-top: 60px;">
+<div class="row" [ngClass]="{'justify-content-start': true}">
+  
+    <div class="col-md-4 mb-4" *ngFor="let sport of sports" >
+    <mat-card class="example-card" >
+    <mat-card-header>
+      <mat-card-title class="title">{{ sport.sportsName }}</mat-card-title>
+
+        <!-- <div class="d-flex justify-content-between align-items-center">
+        <button class="parent-button" style="z-index: 1;">
+          <mat-icon class="color">more_vert</mat-icon>
+          <button class="child-button">
+              <button mat-button class="button d-inline-block" color="primary" routerLink="/participants">Participants</button>
+              <button mat-button class="button d-inline-block" color="primary" routerLink="/score">Score</button>
+              <button mat-button class="button d-inline-block" color="primary" routerLink="/registerparticipant">Register</button>
+          </button>
+        </button>
+      </div> -->
+      <mat-card-subtitle class="color">{{ sport?.sportsCategory.categoryName }}</mat-card-subtitle>
+      
+    </mat-card-header>
+    <mat-card-content class="content">
+         <p class="color"><b>Age Group:</b> &nbsp; 12 to 24 Years</p>
+       <!-- <p><b>Maximum Age Group:</b> &nbsp;{{ sport?.maxAgeGroupId.ageGroupName }}</p> -->
+        <p class="color"><b>Maximum Participants:</b> &nbsp; {{ sport?.maxParticipants }}</p>
+        <p>   &nbsp; <br> </p>
+      <p> </p>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+  </div>
+  </div>
+  
+  

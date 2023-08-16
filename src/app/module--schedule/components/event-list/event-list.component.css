@@ -1,0 +1,58 @@
+table {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .container {
+    margin-top: 20px; 
+    
+  }
+  .search {
+    width: 20%;
+    margin-left: 75%;
+    top: 2%;
+    border: 20px;
+  }
+  .title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+  }
+  .add{
+    font-size: large;
+  }
+
+  .text{
+    font-weight: bold;
+  }
+  .head{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+  th{
+    font-weight: bold;
+    font-size: small;
+    color: rgb(4, 11, 101);
+    background-color: azure;
+  }
+
+  /* .image{
+    background-image: url('https://wallpapercave.com/wp/wp2940452.jpg');
+    
+  } */
+
+  .images{
+    background-image: url('https://www.northstarmeetingsgroup.com/uploadedImages/Articles/How_To/Event_Planning/Site_Selections/GettyImages-469569148.jpg?width=920&scale=both&mode=crop');
+  }
+  
+  .color{
+    color: aliceblue;
+  }
+  .sticky-header {
+    position: sticky;
+  }

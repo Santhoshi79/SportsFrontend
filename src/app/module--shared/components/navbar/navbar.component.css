@@ -1,0 +1,46 @@
+
+.mat-button{
+    color: white;
+ }
+ .image{
+  background-image: url('https://tse3.mm.bing.net/th/id/OIP.j8Qv9OnpsqwrNiPuYbjrqgHaDq?pid=ImgDet&w=1224&h=606&rs=1');
+  background-size: 1200px;
+}
+
+.tool{
+  background-color: rgb(68, 64, 65);
+  background-image: url('https://miro.medium.com/max/1200/1*4fp_-ZkQjSSqKSOMwijRiA.png');
+}
+
+.logout{
+  padding-left: 25%;
+}
+
+.title{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.images{
+  background-image: url('https://miro.medium.com/max/1200/1*4fp_-ZkQjSSqKSOMwijRiA.png'); 
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #0d135c;
+}
+
+.active-link {
+  background-color: #eee;
+  color: #333;
+}
+
+.navbar{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+}
